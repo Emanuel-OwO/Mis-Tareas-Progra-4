@@ -1,0 +1,379 @@
+/* ========== INICIO estilos generales ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", "Roboto", "Poppins", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #5c9f24;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #74c92d;
+    text-decoration: underline;
+}
+
+/* ========== FIN estilos generales ========== */
+
+
+/* ========== INICIO Contenido principal ========== */
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #eee;
+    height: auto;
+    display: flow-root;
+}
+
+h2.wdm-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #5c9f24;
+}
+
+p.wdm-description {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section article {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========== FIN Contenido principal ========== */
+
+
+/* ========== INICIO Título de la tarea ========== */
+#tarea {
+    background: linear-gradient(135deg, #2f6b12, #5c9f24);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#tarea h1 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#tarea p {
+    margin: 4px 0;
+    font-size: 18px;
+}
+
+#tarea .tarea-links {
+    margin-top: 20px;
+}
+
+#tarea .tarea-links a {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 6px;
+}
+
+/* ========== FIN Título de la tarea ========== */
+
+
+/* ================================================================ */
+/* ============  INICIO SECCIÓN CSS LAB (demostraciones)  ========== */
+/* ================================================================ */
+
+#lab .lab-part {
+    font-size: 24px;
+    color: #5c9f24;
+    border-bottom: 2px solid #5c9f24;
+    padding-bottom: 6px;
+    margin: 40px 0 20px;
+}
+
+.lab-demo {
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.lab-demo h4 { font-size: 17px; }
+.lab-note { font-size: 14px; color: #666; margin-top: 10px; }
+.lab-label { font-size: 13px; font-weight: 600; margin: 10px 0 4px; color: #555; }
+
+/* ---------- 2.1 Box Model ---------- */
+.lab-margin-area {
+    background: #fce8cf;
+    display: flow-root;            /* evita que el margin del hijo "escape" del contenedor */
+    width: 410px;
+    max-width: 100%;
+}
+
+.lab-box {
+    margin: 30px;
+    border: 5px solid #444;
+    padding: 20px;
+    background: #cfe8b5;
+}
+
+.lab-content { background: #bfd9f2; padding: 10px; text-align: center; }
+
+.lab-sizing {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #444;
+    background: #cfe8b5;
+    font-size: 13px;
+}
+
+.lab-content-box { box-sizing: content-box; }
+.lab-border-box  { box-sizing: border-box; }
+
+.lab-tag { background: #bfd9f2; border: 1px solid #4a86c5; padding: 6px 10px; }
+.lab-as-block { display: block; width: 70%; margin: 6px 0; }
+.lab-as-inline { display: inline; width: 300px; height: 80px; margin: 20px; }   /* width/height y margin vertical se ignoran */
+.lab-as-inline-block { display: inline-block; width: 170px; height: 60px; margin: 10px; text-align: center; font-size: 13px; }
+
+/* ---------- 2.1 display cambiando el comportamiento ---------- */
+.lab-div-inline { display: inline; }
+.lab-span-block { display: block; width: 70%; margin: 6px 0; }
+
+/* ---------- 2.2 position ---------- */
+.lab-pos-parent {
+    position: relative;
+    height: 210px;
+    background: #f4f4f4;
+    border: 2px dashed #999;
+    padding: 10px;
+}
+
+.lab-pos {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    background: #cfe8b5;
+    border: 1px solid #7ba24a;
+}
+
+.lab-pos-relative { position: relative; top: 20px; left: 30px; background: #bfd9f2; border-color: #4a86c5; }
+.lab-pos-absolute { position: absolute; bottom: 10px; right: 10px; background: #fce8cf; border-color: #d9822b; }
+
+.lab-fixed-badge {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 900;
+    background: #5c9f24;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- 2.2 float y clear ---------- */
+.lab-float-area { display: flow-root; border: 1px solid #ddd; padding: 12px; }
+.lab-float { width: 120px; height: 80px; padding: 8px; background: #fce8cf; border: 1px solid #d9822b; font-size: 13px; }
+.lab-float-left  { float: left;  margin: 0 12px 8px 0; }
+.lab-float-right { float: right; margin: 0 0 8px 12px; }
+.lab-float-area p { text-align: justify; }
+.lab-clear { clear: both; background: #eee; padding: 6px 10px; margin-top: 8px; font-size: 13px; }
+
+/* ---------- 2.2 layout con float ---------- */
+.lab-layout { border: 1px solid #ddd; }
+.lab-layout > div { padding: 12px; font-size: 13px; }
+.lab-l-header  { background: #cfe8b5; }
+.lab-l-menu    { float: left; width: 30%; height: 90px; background: #bfd9f2; }
+.lab-l-content { float: left; width: 70%; height: 90px; background: #fce8cf; }
+.lab-l-footer  { clear: both; background: #ddd; }
+
+/* ---------- 2.2 display / visibility ---------- */
+.lab-chips { background: #f4f4f4; padding: 8px; }
+
+.lab-chip {
+    display: inline-block;
+    width: 60px;
+    padding: 8px;
+    margin-right: 6px;
+    text-align: center;
+    background: #bfd9f2;
+    border: 1px solid #4a86c5;
+}
+
+.lab-invisible { visibility: hidden; }
+.lab-gone { display: none; }
+
+.lab-btn {
+    background: #5c9f24;
+    color: #fff;
+    border: 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wdm-status-message {
+    visibility: hidden;               /* oculto, pero su espacio queda reservado */
+    color: #5c9f24;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.lab-btn:hover + .wdm-status-message,
+.lab-btn:focus + .wdm-status-message { visibility: visible; }
+
+/* ---------- 2.2 visibility: collapse ---------- */
+.lab-table { border-collapse: collapse; width: 260px; }
+.lab-table td { border: 1px solid #888; padding: 6px 10px; }
+.lab-collapse { visibility: collapse; }
+
+/* ---------- 2.2 overflow ---------- */
+.lab-overflow-box {
+    width: 180px;
+    height: 70px;
+    padding: 6px;
+    border: 1px solid #888;
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.lab-of-visible { overflow: visible; margin-bottom: 110px; }
+.lab-of-hidden  { overflow: hidden; }
+.lab-of-scroll  { overflow: scroll; }
+.lab-of-auto    { overflow: auto; }
+
+/* ---------- 2.2 z-index ---------- */
+.lab-zparent { position: relative; height: 180px; }
+
+.lab-z {
+    position: absolute;
+    width: 140px;
+    height: 90px;
+    padding: 8px;
+    border: 1px solid #333;
+    font-size: 13px;
+}
+
+.lab-z1 { top: 10px; left: 10px;  background: #bfd9f2; z-index: 1; }
+.lab-z2 { top: 40px; left: 80px;  background: #cfe8b5; z-index: 3; }
+.lab-z3 { top: 70px; left: 150px; background: #fce8cf; z-index: 2; }
+
+/* ---------- 2.3 Flexbox ---------- */
+.lab-row { display: flex; flex-flow: row wrap; gap: 20px; align-items: flex-start; }
+.lab-col { flex: 0 1 auto; }
+
+.lab-flex {
+    display: flex;
+    background: #f4f4f4;
+    border: 2px dashed #999;
+    padding: 6px;
+    margin-bottom: 8px;
+}
+
+.lab-item {
+    background: #bfd9f2;
+    border: 1px solid #4a86c5;
+    padding: 8px 14px;
+    min-width: 44px;
+    text-align: center;
+}
+
+/* justify-content */
+.lab-jc-start   { justify-content: flex-start; }
+.lab-jc-center  { justify-content: center; }
+.lab-jc-between { justify-content: space-between; }
+.lab-jc-around  { justify-content: space-around; }
+.lab-jc-evenly  { justify-content: space-evenly; }
+
+/* flex-direction */
+.lab-dir-rowrev { flex-direction: row-reverse; }
+.lab-dir-column { flex-direction: column; width: 120px; gap: 6px; }
+.lab-dir-colrev { flex-direction: column-reverse; width: 120px; gap: 6px; }
+
+/* align-items y align-self */
+.lab-tall { height: 110px; width: 130px; }
+.lab-ai-stretch  { align-items: stretch; }
+.lab-ai-start    { align-items: flex-start; }
+.lab-ai-center   { align-items: center; }
+.lab-ai-end      { align-items: flex-end; }
+.lab-ai-baseline { align-items: baseline; }
+.lab-fs-1 { font-size: 14px; }
+.lab-fs-2 { font-size: 32px; }
+.lab-self-end { align-self: flex-end; background: #fce8cf; border-color: #d9822b; }
+
+/* order y flex-grow */
+.lab-order-1 { order: 1; }
+.lab-order-2 { order: 2; }
+.lab-order-3 { order: 3; }
+.lab-grow-0 { flex-grow: 0; }
+.lab-grow-1 { flex-grow: 1; }
+.lab-grow-2 { flex-grow: 2; }
+
+/* flex-basis y flex-shrink */
+.lab-narrow { width: 400px; max-width: 100%; overflow: auto; }
+.lab-basis-100  { flex-basis: 100px; }
+.lab-basis-200  { flex-basis: 200px; }
+.lab-basis-auto { flex-basis: auto; }
+.lab-noshrink { flex-shrink: 0; background: #fce8cf; border-color: #d9822b; }
+
+/* flex (shorthand) */
+.lab-flex-fixed { flex: 0 0 150px; }
+.lab-flex-rest  { flex: 1; }
+.lab-flex-2     { flex: 2; }
+
+/* flex-wrap */
+.lab-w300        { width: 300px; max-width: 100%; }
+.lab-nowrap      { flex-wrap: nowrap; }
+.lab-wrap-normal { flex-wrap: wrap; }
+.lab-wrap-rev    { flex-wrap: wrap-reverse; }
+
+/* flex-flow y align-content */
+.lab-wrap { flex-flow: row wrap; width: 300px; height: 200px; }
+.lab-item-sm { width: 80px; height: 40px; padding: 8px 0; }
+.lab-ac-start   { align-content: flex-start; }
+.lab-ac-between { align-content: space-between; }
+.lab-ac-stretch { align-content: stretch; }
+.lab-ac-center  { align-content: center; }
+.lab-ac-around  { align-content: space-around; }
+
+/* flex responsive */
+.lab-flex-resp {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+
+.lab-item-resp {
+    flex: 1 1 200px;                  /* grow: 1 | shrink: 1 | basis: 200px */
+    background: #cfe8b5;
+    border: 1px solid #7ba24a;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .lab-flex-resp { flex-direction: column; }
+    .lab-item-resp { flex-basis: auto; }   /* en columna el basis sería la ALTURA */
+}
+
+/* ============  FIN SECCIÓN CSS LAB  =============== */

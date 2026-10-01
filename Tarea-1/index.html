@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> indica al navegador que use el modo estandar HTML5 -->
+<html lang="es">
+<!-- A. <html lang="es"> elemento raíz del documento -->
+<head>
+    <!-- A. <head> agrupa metadatos: no se ve en pantalla -->
+  <meta charset="UTF-8">
+  <!-- A. <meta charset> define la codificación de caracteres -->
+  <meta name="description" content="Tarea 1 - Demostración de etiquetas HTML5 - Emanuel - UTN ISW-512">
+  <!-- A. <meta name="description"> usado por buscadores para el snippet de resultados -->
+  <base href="./">
+  <!-- A. <base> fija la URL base para los enlaces/recursos relativos de esta página -->
+  <title>Tarea 1 - Etiquetas HTML5 - Emanuel</title>
+  <!-- A. <title> texto que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="style.css">
+  <!-- A. <link> conecta la hoja de estilos externa -->
+</head>
+
+<body>
+    <!-- A. <body> contiene todo el contenido visible de la página -->
+    <hgroup>
+        <!-- B. <hgroup> agrupa el título principal con su subtítulo -->
+        <h1>Emanuel Madrigal Guzman</h1>
+        <p>Ingeniería del Software - ISW-512 Diseño de Aplicaciones Web - Tarea 1: Etiquetas HTML5</p>
+    </hgroup>
+     <img src="assets/img/foto.jpg" alt="Foto de Emanuel" width="200" height="200">
+    <!-- F. <img> avatar que me identifica, con src y alt -->
+
+    <address>
+        <!-- B. <address> información de contacto del autor de la pagina-->
+        <p>Contacto: <a href="mailto:madrigalduzmanemanuel990@gmail.com">madrigalduzmanemanuel990@gmail.com</a></p>
+        <p>Repositorio: <a href="https://github.com/Emanuel-OwO" target="_blank">github.com/Emanuel-OwO</a></p>
+    </address>
+
+    <hr>
+    <!-- B. <hr> línea horizontal que separa secciones -->
+
+    <!-- ============================================================ -->
+    <h2 id="seccion-a">A. Etiquetas de estructura básica</h2>
+    <p>Este grupo de etiquetas no se ve directamente en la página,
+         pero sostiene toda la página revisa el código fuente para comprobarlas.</p>
+     <ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code>: primera línea del documento (ver código fuente).</li>
+    <li><code>&lt;html lang="es"&gt;</code>: elemento raíz, define el idioma de la página.</li>
+    <li><code>&lt;head&gt;</code>: agrupa <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>,
+        <code>&lt;link&gt;</code> y <code>&lt;base&gt;</code>.</li>
+    <li><code>&lt;title&gt;</code>: mira la pestaña de tu navegador — dice
+        "Tarea 1 - Etiquetas HTML5 - Emanuel".</li>
+    <li><code>&lt;base href="./"&gt;</code>: fija la URL base de los enlaces relativos de esta página.</li>
+    <li><code>&lt;link rel="stylesheet"&gt;</code>: aplica el color de fondo y la tipografía que ves
+        (viene de <code>style.css</code>).</li>
+    <li><code>&lt;meta charset="UTF-8"&gt;</code>: permite que tildes y "ñ" se vean bien:áéíóú ñ.</li>
+    <li><code>&lt;body&gt;</code>: contiene todo lo que estás leyendo ahora mismo.</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="seccion-b">B. Etiquetas de estructura de sección</h2>
+
+  <div style="border:1px dashed #999; padding:10px;">
+    <!-- B. <div> agrupa este bloque solo con fines de estilo, sin significado semántico -->
+    <p>Este recuadro con borde punteado es un <code>&lt;div&gt;</code>: no tiene significado
+      propio, solo agrupa contenido para aplicarle estilo.</p>
+  </div>
+
+  <p>Video incrustado con <code>&lt;iframe&gt;</code> (categorías B y G):</p>
+  <iframe width="320" height="180" src="https://www.youtube.com/embed/Acjf66Qdj2U"
+          title="Video incrustado con iframe" frameborder="0" allowfullscreen>
+  </iframe>
+  <!-- B/G. <iframe> muestra una página/video externo dentro de esta página -->
+
+   <!-- ============================================================ -->
+ <h2 id="seccion-c">C. Etiquetas de contenido</h2>
+ <h3>Listas</h3>
+ <ul>
+    <!--C. <ul><li> lista desordenada-->
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+ </ul>
+ <ol>
+    <!--C. <ol><li> lista ordenada-->
+    <li>Analizar requerimeintos</li>
+    <li>Diseñar la pagina</li>
+    <li>Publicar en GitHub Pages</li>
+ </ol>
+
+ <h3>Lista de descripcion</h3>
+ <dl>
+    <!--C. <dl><dt><dd> lista de definiciones-->
+    <dt>HTML</dt>
+    <dd>Lenguaje de marcado para crear páginas web.</dd>
+    <dt>CSS</dt>
+    <dd>Lenguaje de estilos para dar formato a las páginas web.</dd>
+    <dt>JavaScript</dt>
+    <dd>Lenguaje de programación para agregar interactividad a las páginas web.</dd>
+    <dt>SEO</dt>
+    <dd>Conjunto de prácticas para mejorar la visibilidad en buscadores.</dd>
+ </dl>
+ 
+ <h3>Figura</h3>
+ <figure>
+    <!-- C. <figure><figcaption> imagen con su leyenda -->
+    <img src="https://picsum.photos/seed/utn/300/180" alt="Imagen de ejemplo para la figura" width="300">
+    <figcaption>Imagen de ejemplo para la figura</figcaption>
+ </figure>
+
+ <h3>Contenido expandido</h3>
+ <details>
+    <!-- C. <details><summary> contenido expandible -->
+    <summary>Haz clic para ver más información</summary>
+    <p>Este contenido está oculto por defecto y se puede expandir al hacer clic en el resumen.</p>
+    </details>
+
+ <h3>Dialogo</h3>
+ <button onclick="document.getElementById('miDialogo').showModal()">Abrir diálogo</button>
+ <dialog id="miDialogo">
+    <!-- C. <dialog> ventana de diálogo controlada por JavaScript -->
+    <p>Este es un <code>&lt;dialog&gt;</code>mostrado como ventana modal.</p>
+    <button onclick="document.getElementById('miDialogo').close()">Cerrar</button>
+    </dialog>
+
+    <!-- ============================================================ -->
+    <h2 id="seccion-d">D. Etiquetas de texto</h2>
+
+     <p>Este es un párrafo normal con <code>&lt;p&gt;</code>.<br>
+    <!-- D. <br> salto de línea sin crear un párrafo nuevo -->
+    Esta segunda línea usa <code>&lt;br&gt;</code> para separarse sin ser un párrafo nuevo.</p>
+
+  <pre> Este texto usa &lt;pre&gt;:
+     respeta   espacios
+      y saltos de línea
+   tal como se escriben.
+  </pre>
+  <!-- D. <pre> texto preformateado -->
+
+<blockquote cite="https://developers.google.com/search/docs/fundamentals/seo-starter-guide">
+    <!-- D. <blockquote> cita en bloque con sangría -->
+    SEO es sobre ayudar a los motores de búsqueda a entender tu contenido.
+  </blockquote>
+  <p>Google lo resume así: <q>SEO consiste en ayudar a los buscadores a entender tu sitio</q>,
+    <!-- D. <q> cita corta en línea -->
+    según la SEO Starter Guide de Google.
+    <!-- D.  título de la obra citada -->
+  </p>
+
+  <p>La <abbr title="Search Engine Optimization">SEO</abbr> es clave para el posicionamiento web.
+  <!-- D. <abbr title="..."> muestra el significado al pasar el cursor -->
+  <br><dfn>HTML5</dfn> es la quinta versión del lenguaje de marcado de hipertexto.
+  <!-- D. <dfn> marca la definición de un término -->
+  </p>
+
+  <p>Código de ejemplo: <code>console.log("Hola UTN");</code>
+  <!-- D. <code> fragmento de código en fuente monoespaciada -->
+  Para guardar, presiona <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+  <!-- D. <kbd> representa una entrada de teclado -->
+  </p>
+
+  <p>
+    <b>Texto en negrita</b> (solo estilo) vs <strong>texto fuerte</strong> (importancia real).
+    <!-- D. <b> vs <strong> -->
+    <br><i>Texto en cursiva</i> (idioma o término técnico) vs <em>texto enfático</em> (énfasis real).
+    <!-- D. <i> vs <em> -->
+    <br>Resultado <mark>resaltado</mark> de una búsqueda.
+    <!-- D. <mark> -->
+    <br><small>Este texto pequeño es una nota secundaria.</small>
+    <!-- D. <small> -->
+    <br>Precio: <del>₡15000</del> <ins>₡9900</ins>
+    <!-- D. <del> texto eliminado / <ins> texto insertado -->
+    <br>Fórmula química: H<sub>2</sub>O — Potencia: x<sup>2</sup>
+    <!-- D. <sub> subíndice / <sup> superíndice -->
+    <br>Entrega: <time datetime="2026-09-25">25 de septiembre de 2026</time>
+    <!-- D. <time datetime="..."> fecha legible por máquina -->
+    <br>Producto: <data value="001">Curso ISW-512</data>
+    <!-- D. <data value="..."> dato legible por máquina -->
+    <br>Esta palabra está en <span style="color:#b35900;">color naranja</span> usando span.
+    <!-- D. <span> sección de texto sin semántica, para estilo -->
+  </p>
+
+  <!-- ============================================================ -->
+  <h2 id="seccion-e">E. Etiquetas de enlace</h2>
+
+  <p>Enlace normal: <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+    W3Schools HTML</a></p>
+  <!-- E. <a href="..."> enlace -->
+
+  <p>Mapa de imagen con zonas clicables:</p>
+  <img src="https://picsum.photos/seed/mapa/300/200" alt="Imagen usada como mapa" usemap="#mimapa">
+  <map name="mimapa">
+    <!-- E. <map> define el mapa de imagen -->
+    <area shape="rect" coords="0,0,150,200" href="https://developer.mozilla.org" alt="Zona izquierda: MDN">
+    <!-- E. <area> zona clicable rectangular -->
+    <area shape="circle" coords="220,100,60" href="https://www.w3schools.com" alt="Zona derecha: W3Schools">
+    <!-- E. <area> zona clicable circular -->
+  </map>
+
+  <!-- ============================================================ -->
+  <h2 id="seccion-f">F. Etiquetas de imagen</h2>
+
+  <img src="https://picsum.photos/seed/img1/300/180" alt="Imagen de ejemplo simple" width="300">
+  <!-- F. <img src alt> -->
+
+  <picture>
+    <!-- F. <picture> + <source> imagen que cambia según el tamaño de pantalla -->
+    <source media="(max-width: 600px)" srcset="https://picsum.photos/seed/small/300/180">
+    <source media="(min-width: 601px)" srcset="https://picsum.photos/seed/large/600/300">
+    <img src="https://picsum.photos/seed/default/300/180" alt="Imagen responsiva con picture y source">
+  </picture>
+
+  <p>Dibujo hecho con <code>&lt;canvas&gt;</code> y JavaScript:</p>
+  <canvas id="miCanvas" width="200" height="120" style="border:1px solid #999;"></canvas>
+  <!-- F. <canvas> lienzo dibujado con JS -->
+
+  <p>Gráfico vectorial con <code>&lt;svg&gt;</code>:</p>
+  <svg width="150" height="100">
+    <!-- F. <svg> gráfico vectorial escalable, definido directamente en HTML -->
+    <circle cx="50" cy="50" r="40" fill="#2f6fed" />
+    <rect x="90" y="20" width="50" height="60" fill="#e9a23b" />
+  </svg>
+
+  <!-- ============================================================ -->
+  <h2 id="seccion-g">G. Etiquetas de multimedia</h2>
+
+  <p>Audio con <code>&lt;audio&gt;</code> y <code>&lt;source&gt;</code>:</p>
+  <audio controls>
+    <!-- G. <audio controls> reproductor nativo -->
+    <source src="assets/audio/motor.mp3" type="audio/mpeg">
+    <!-- G. <source> formato alternativo dentro de audio -->
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <p>Video con <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code> y <code>&lt;track&gt;</code>:</p>
+  <video width="320" controls>
+    <!-- G. <video controls> reproductor nativo -->
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    <!-- G. <source> formato alternativo dentro deL video -->
+    <track kind="subtitles" src="subs.vtt" srclang="es" label="Español">
+    <!-- G. <track> subtítulos del video -->
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <p>El <code>&lt;iframe&gt;</code> de YouTube ya se mostró en la sección B.</p>
+
+  <hr>
+  <footer>
+    <p><small>Tarea 1 - Diseño de Aplicaciones Web - Emanuel - UTN, 2026.</small></p>
+  </footer>
+
+  <script>
+    // Script pequeño para demostrar la funcionalidad de <canvas>
+    const canvas = document.getElementById('miCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#2f6fed';
+    ctx.fillRect(10, 10, 80, 60);
+    ctx.fillStyle = '#e9a23b';
+    ctx.beginPath();
+    ctx.arc(150, 60, 40, 0, Math.PI * 2);
+    ctx.fill();
+  </script>
+</body>
+</html>

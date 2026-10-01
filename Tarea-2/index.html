@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 - CSS3</title>
+    <link rel="stylesheet" href="default/css/default.css">
+</head>
+
+<body>
+
+    <!-- INICIO Contenido principal del sitio -->
+    <main>
+        <!-- INICIO Título de la tarea -->
+        <section id="tarea">
+            <h1>Tarea 2: CSS3</h1>
+            <p><b>Nombre:</b> Emanuel Madrigal Guzman</p>
+            <p><b>Curso:</b> ISW-512 Diseño de Aplicaciones Web</p>
+            <nav class="tarea-links">
+                <a href="#caja">2.1 Modelo de caja</a> |
+                <a href="#propiedades">2.2 Propiedades de posicionamiento</a> |
+                <a href="#flexbox">2.3 Flexbox</a>
+            </nav>
+        </section>
+        <!-- FIN Título de la tarea -->
+
+
+        <!-- INICIO Sección CSS Lab: demostraciones de la Tarea 2 -->
+        <section id="lab">
+            <h2 class="wdm-title">CSS Lab</h2>
+            <article>
+                <p class="wdm-description">Demostraciones de la Tarea 2: Modelo de Caja (2.1), propiedades de
+                    visualización y posicionamiento (2.2) y Flexbox (2.3).</p>
+
+                <!-- ========== 2.1 MODELO DE CAJA ========== -->
+                <h3 class="lab-part" id="caja">2.1 Modelo de Caja (Box Model)</h3>
+
+                <div class="lab-demo">
+                    <h4>Capas de la caja: content, padding, border y margin</h4>
+                    <div class="lab-margin-area">
+                        <div class="lab-box">
+                            <div class="lab-content">Content (width: 300px)</div>
+                        </div>
+                    </div>
+                    <p class="lab-note">Naranja = margin (30px) · Gris oscuro = border (5px) · Verde = padding (20px) ·
+                        Azul = content (300px).</p>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>content-box vs border-box (ambas con width: 200px, padding: 20px, border: 5px)</h4>
+                    <div class="lab-row">
+                        <div class="lab-sizing lab-content-box">content-box<br>Ancho real: 200 + 40 + 10 = 250px</div>
+                        <div class="lab-sizing lab-border-box">border-box<br>Ancho real: 200px (todo incluido)</div>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>Elementos block, inline e inline-block</h4>
+                    <div class="lab-tag lab-as-block">div → display: block (ocupa su propia línea)</div>
+                    <div class="lab-tag lab-as-block">div → display: block (otra línea)</div>
+                    <p>Texto de un párrafo con un
+                        <span class="lab-tag lab-as-inline">span → inline: ignora width y height</span>
+                        dentro de la línea, y un
+                        <span class="lab-tag lab-as-inline-block">inline-block: sí respeta width y height</span>
+                        que también fluye con el texto.</p>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>Cambiar el comportamiento con display</h4>
+                    <p class="lab-label">Tres div con display: inline (se ponen en la misma línea)</p>
+                    <div class="lab-tag lab-div-inline">div inline 1</div>
+                    <div class="lab-tag lab-div-inline">div inline 2</div>
+                    <div class="lab-tag lab-div-inline">div inline 3</div>
+                    <p class="lab-label">Tres span con display: block (cada uno ocupa su línea)</p>
+                    <span class="lab-tag lab-span-block">span block 1</span>
+                    <span class="lab-tag lab-span-block">span block 2</span>
+                    <span class="lab-tag lab-span-block">span block 3</span>
+                </div>
+
+                <!-- ========== 2.2 VISUALIZACIÓN Y POSICIONAMIENTO ========== -->
+                <h3 class="lab-part" id="propiedades">2.2 Visualización y posicionamiento</h3>
+
+                <div class="lab-demo">
+                    <h4>position: static, relative, absolute y fixed</h4>
+                    <div class="lab-pos-parent">
+                        <div class="lab-pos lab-pos-static">static (flujo normal)</div>
+                        <div class="lab-pos lab-pos-relative">relative (top: 20px; left: 30px)</div>
+                        <div class="lab-pos lab-pos-absolute">absolute (bottom: 10px; right: 10px)</div>
+                    </div>
+                    <p class="lab-note">El contenedor gris tiene position: relative, por eso el elemento absolute se
+                        ubica dentro de él. La etiqueta “position: fixed” de la esquina inferior derecha de la ventana
+                        no se mueve al hacer scroll.</p>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>float y clear</h4>
+                    <div class="lab-float-area">
+                        <div class="lab-float lab-float-left">float: left</div>
+                        <div class="lab-float lab-float-right">float: right</div>
+                        <p>Este texto rodea a los dos elementos flotantes: uno a la izquierda y otro a la derecha.
+                            Los flotantes salen del flujo normal y el contenido restante se acomoda en el espacio que
+                            queda entre ellos, como en una revista. Cuando el texto termina, el siguiente elemento
+                            necesita limpiar los flotantes para no acomodarse a su lado.</p>
+                        <div class="lab-clear">clear: both → este bloque baja hasta quedar debajo de los flotantes</div>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>Layout con float (encabezado, menú, contenido y pie)</h4>
+                    <div class="lab-layout">
+                        <div class="lab-l-header">Encabezado</div>
+                        <div class="lab-l-menu">Menú (float: left, 30%)</div>
+                        <div class="lab-l-content">Contenido (float: left, 70%)</div>
+                        <div class="lab-l-footer">Pie de página (clear: both)</div>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>display: none vs visibility: hidden</h4>
+                    <p class="lab-label">visibility: hidden en B (el espacio se conserva)</p>
+                    <div class="lab-chips">
+                        <span class="lab-chip">A</span><span class="lab-chip lab-invisible">B</span><span
+                            class="lab-chip">C</span>
+                    </div>
+                    <p class="lab-label">display: none en B (el espacio desaparece)</p>
+                    <div class="lab-chips">
+                        <span class="lab-chip">A</span><span class="lab-chip lab-gone">B</span><span
+                            class="lab-chip">C</span>
+                    </div>
+                    <p class="lab-label">Mensaje con visibility: hidden (pasa el mouse o enfoca el botón)</p>
+                    <button type="button" class="lab-btn">Enviar</button>
+                    <p class="wdm-status-message">✔ Mensaje enviado correctamente.</p>
+                    <p class="lab-note">El hueco del mensaje ya está reservado, por eso este texto no se mueve cuando
+                        el mensaje aparece.</p>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>visibility: collapse (filas de tabla)</h4>
+                    <table class="lab-table">
+                        <tr><td>Fila 1</td><td>visible</td></tr>
+                        <tr class="lab-collapse"><td>Fila 2</td><td>collapse</td></tr>
+                        <tr><td>Fila 3</td><td>visible</td></tr>
+                    </table>
+                    <p class="lab-note">La fila 2 tiene visibility: collapse y desaparece sin dejar hueco. Solo
+                        funciona en filas y columnas de tabla.</p>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>overflow: visible, hidden, scroll y auto</h4>
+                    <div class="lab-row">
+                        <div>
+                            <p class="lab-label">visible</p>
+                            <div class="lab-overflow-box lab-of-visible">Este texto es más largo que la caja de 70px de
+                                alto. Con overflow: visible, el contenido sobrante se sale de la caja y se ve fuera de
+                                ella.</div>
+                        </div>
+                        <div>
+                            <p class="lab-label">hidden</p>
+                            <div class="lab-overflow-box lab-of-hidden">Este texto es más largo que la caja de 70px de
+                                alto. Con overflow: hidden, el contenido sobrante se recorta y no se ve.</div>
+                        </div>
+                        <div>
+                            <p class="lab-label">scroll</p>
+                            <div class="lab-overflow-box lab-of-scroll">Este texto es más largo que la caja de 70px de
+                                alto. Con overflow: scroll, siempre aparecen las barras de desplazamiento.</div>
+                        </div>
+                        <div>
+                            <p class="lab-label">auto</p>
+                            <div class="lab-overflow-box lab-of-auto">Este texto es más largo que la caja de 70px de
+                                alto. Con overflow: auto, la barra aparece solo cuando el contenido no cabe.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>z-index</h4>
+                    <div class="lab-zparent">
+                        <div class="lab-z lab-z1">z-index: 1</div>
+                        <div class="lab-z lab-z2">z-index: 3 (queda arriba)</div>
+                        <div class="lab-z lab-z3">z-index: 2</div>
+                    </div>
+                </div>
+
+                <!-- ========== 2.3 FLEXBOX ========== -->
+                <h3 class="lab-part" id="flexbox">2.3 Flexbox en CSS3</h3>
+
+                <div class="lab-demo">
+                    <h4>justify-content (eje principal)</h4>
+                    <p class="lab-label">flex-start</p>
+                    <div class="lab-flex lab-jc-start"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                    <p class="lab-label">center</p>
+                    <div class="lab-flex lab-jc-center"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                    <p class="lab-label">space-between</p>
+                    <div class="lab-flex lab-jc-between"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                    <p class="lab-label">space-around</p>
+                    <div class="lab-flex lab-jc-around"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                    <p class="lab-label">space-evenly</p>
+                    <div class="lab-flex lab-jc-evenly"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>flex-direction</h4>
+                    <p class="lab-label">row-reverse</p>
+                    <div class="lab-flex lab-dir-rowrev"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                    <p class="lab-label">column</p>
+                    <div class="lab-flex lab-dir-column"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                    <p class="lab-label">column-reverse</p>
+                    <div class="lab-flex lab-dir-colrev"><span class="lab-item">1</span><span
+                            class="lab-item">2</span><span class="lab-item">3</span></div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>align-items (eje cruzado) y align-self</h4>
+                    <div class="lab-row">
+                        <div class="lab-col">
+                            <p class="lab-label">stretch</p>
+                            <div class="lab-flex lab-tall lab-ai-stretch"><span class="lab-item">1</span><span
+                                    class="lab-item">2</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-start</p>
+                            <div class="lab-flex lab-tall lab-ai-start"><span class="lab-item">1</span><span
+                                    class="lab-item">2</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">center</p>
+                            <div class="lab-flex lab-tall lab-ai-center"><span class="lab-item">1</span><span
+                                    class="lab-item">2</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-end</p>
+                            <div class="lab-flex lab-tall lab-ai-end"><span class="lab-item">1</span><span
+                                    class="lab-item">2</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-start + align-self en el 2</p>
+                            <div class="lab-flex lab-tall lab-ai-start"><span class="lab-item">1</span><span
+                                    class="lab-item lab-self-end">2</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">baseline (letras de distinto tamaño)</p>
+                            <div class="lab-flex lab-tall lab-ai-baseline"><span
+                                    class="lab-item lab-fs-1">1</span><span class="lab-item lab-fs-2">2</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>order y flex-grow</h4>
+                    <p class="lab-label">order: el 1 tiene order 3, el 2 tiene order 1 y el 3 tiene order 2</p>
+                    <div class="lab-flex"><span class="lab-item lab-order-3">Item 1 (order: 3)</span><span
+                            class="lab-item lab-order-1">Item 2 (order: 1)</span><span
+                            class="lab-item lab-order-2">Item 3 (order: 2)</span></div>
+                    <p class="lab-label">flex-grow: 1, 2 y 1 (reparten el espacio sobrante)</p>
+                    <div class="lab-flex"><span class="lab-item lab-grow-1">grow 1</span><span
+                            class="lab-item lab-grow-2">grow 2</span><span class="lab-item lab-grow-1">grow
+                            1</span></div>
+                    <p class="lab-label">flex-grow: 0, 1 y 2 (el de grow 0 no crece)</p>
+                    <div class="lab-flex"><span class="lab-item lab-grow-0">grow 0</span><span
+                            class="lab-item lab-grow-1">grow 1</span><span class="lab-item lab-grow-2">grow 2</span>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>flex-basis y flex-shrink (contenedor de 400px, items con basis de 200px)</h4>
+                    <p class="lab-label">flex-shrink: 1 (por defecto) → los tres se encogen para caber</p>
+                    <div class="lab-flex lab-narrow"><span class="lab-item lab-basis-200">1</span><span
+                            class="lab-item lab-basis-200">2</span><span class="lab-item lab-basis-200">3</span>
+                    </div>
+                    <p class="lab-label">flex-shrink: 0 en el item 1 → conserva sus 200px y los otros se encogen más
+                    </p>
+                    <div class="lab-flex lab-narrow"><span
+                            class="lab-item lab-basis-200 lab-noshrink">1</span><span
+                            class="lab-item lab-basis-200">2</span><span class="lab-item lab-basis-200">3</span>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>flex-basis: 100px, 200px y auto</h4>
+                    <div class="lab-flex">
+                        <span class="lab-item lab-basis-100">100px</span>
+                        <span class="lab-item lab-basis-200">200px</span>
+                        <span class="lab-item lab-basis-auto">auto (según su contenido)</span>
+                    </div>
+                    <p class="lab-note">flex-basis es el tamaño inicial del item antes de repartir el espacio. Con
+                        auto, usa el ancho de su contenido.</p>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>flex (shorthand de flex-grow, flex-shrink y flex-basis)</h4>
+                    <p class="lab-label">flex: 0 0 150px (tamaño fijo) y flex: 1 (ocupa el resto)</p>
+                    <div class="lab-flex">
+                        <span class="lab-item lab-flex-fixed">flex: 0 0 150px</span>
+                        <span class="lab-item lab-flex-rest">flex: 1</span>
+                    </div>
+                    <p class="lab-label">flex: 1, flex: 1 y flex: 2 (reparten el ancho en proporción 1 : 1 : 2)</p>
+                    <div class="lab-flex">
+                        <span class="lab-item lab-flex-rest">flex: 1</span>
+                        <span class="lab-item lab-flex-rest">flex: 1</span>
+                        <span class="lab-item lab-flex-2">flex: 2</span>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>flex-wrap (contenedor de 300px, 5 items de 80px)</h4>
+                    <p class="lab-label">nowrap (por defecto): los items se aprietan para caber en una sola línea</p>
+                    <div class="lab-flex lab-w300 lab-nowrap"><span class="lab-item lab-item-sm">1</span><span
+                            class="lab-item lab-item-sm">2</span><span class="lab-item lab-item-sm">3</span><span
+                            class="lab-item lab-item-sm">4</span><span class="lab-item lab-item-sm">5</span></div>
+                    <p class="lab-label">wrap: los items que no caben bajan a otra línea</p>
+                    <div class="lab-flex lab-w300 lab-wrap-normal"><span class="lab-item lab-item-sm">1</span><span
+                            class="lab-item lab-item-sm">2</span><span class="lab-item lab-item-sm">3</span><span
+                            class="lab-item lab-item-sm">4</span><span class="lab-item lab-item-sm">5</span></div>
+                    <p class="lab-label">wrap-reverse: igual que wrap, pero las líneas se apilan al revés (la primera
+                        queda abajo)</p>
+                    <div class="lab-flex lab-w300 lab-wrap-rev"><span class="lab-item lab-item-sm">1</span><span
+                            class="lab-item lab-item-sm">2</span><span class="lab-item lab-item-sm">3</span><span
+                            class="lab-item lab-item-sm">4</span><span class="lab-item lab-item-sm">5</span></div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>flex-wrap, flex-flow y align-content (contenedor de 300px de ancho y 200px de alto)</h4>
+                    <div class="lab-row">
+                        <div class="lab-col">
+                            <p class="lab-label">flex-flow: row wrap + align-content: flex-start</p>
+                            <div class="lab-flex lab-wrap lab-ac-start"><span class="lab-item lab-item-sm">1</span><span
+                                    class="lab-item lab-item-sm">2</span><span class="lab-item lab-item-sm">3</span><span
+                                    class="lab-item lab-item-sm">4</span><span class="lab-item lab-item-sm">5</span><span
+                                    class="lab-item lab-item-sm">6</span><span class="lab-item lab-item-sm">7</span>
+                            </div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-flow: row wrap + align-content: space-between</p>
+                            <div class="lab-flex lab-wrap lab-ac-between"><span
+                                    class="lab-item lab-item-sm">1</span><span class="lab-item lab-item-sm">2</span><span
+                                    class="lab-item lab-item-sm">3</span><span class="lab-item lab-item-sm">4</span><span
+                                    class="lab-item lab-item-sm">5</span><span class="lab-item lab-item-sm">6</span><span
+                                    class="lab-item lab-item-sm">7</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-flow: row wrap + align-content: stretch</p>
+                            <div class="lab-flex lab-wrap lab-ac-stretch"><span
+                                    class="lab-item lab-item-sm">1</span><span class="lab-item lab-item-sm">2</span><span
+                                    class="lab-item lab-item-sm">3</span><span class="lab-item lab-item-sm">4</span><span
+                                    class="lab-item lab-item-sm">5</span><span class="lab-item lab-item-sm">6</span><span
+                                    class="lab-item lab-item-sm">7</span></div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-flow: row wrap + align-content: center</p>
+                            <div class="lab-flex lab-wrap lab-ac-center"><span class="lab-item lab-item-sm">1</span><span
+                                    class="lab-item lab-item-sm">2</span><span class="lab-item lab-item-sm">3</span><span
+                                    class="lab-item lab-item-sm">4</span><span class="lab-item lab-item-sm">5</span><span
+                                    class="lab-item lab-item-sm">6</span><span class="lab-item lab-item-sm">7</span>
+                            </div>
+                        </div>
+                        <div class="lab-col">
+                            <p class="lab-label">flex-flow: row wrap + align-content: space-around</p>
+                            <div class="lab-flex lab-wrap lab-ac-around"><span class="lab-item lab-item-sm">1</span><span
+                                    class="lab-item lab-item-sm">2</span><span class="lab-item lab-item-sm">3</span><span
+                                    class="lab-item lab-item-sm">4</span><span class="lab-item lab-item-sm">5</span><span
+                                    class="lab-item lab-item-sm">6</span><span class="lab-item lab-item-sm">7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lab-demo">
+                    <h4>Flex responsive (flex: 1 1 200px + wrap + gap)</h4>
+                    <p class="lab-note">Cambia el tamaño de la ventana: los items se reacomodan solos, y por debajo de
+                        600px pasan a una sola columna con una media query.</p>
+                    <div class="lab-flex-resp">
+                        <div class="lab-item-resp">Item 1</div>
+                        <div class="lab-item-resp">Item 2</div>
+                        <div class="lab-item-resp">Item 3</div>
+                        <div class="lab-item-resp">Item 4</div>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+        <!-- FIN Sección CSS Lab -->
+
+        <span class="lab-fixed-badge">position: fixed</span>
+
+    </main>
+    <!-- FIN Contenido principal del sitio -->
+
+</body>
