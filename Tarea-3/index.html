@@ -3,98 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Diseño Web Responsivo</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Diseño Web Responsivo</h1>
-        <p>CSS3 Media Queries, Grid-View y Bootstrap 5</p>
-    </header>
+    <div class="fondo-principal">
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#media">Media Queries</a>
-        <a href="#grid">Grid-View</a>
-        <a href="#bootstrap">Bootstrap 5</a>
-    </nav>
+        <header>
+            <div class="header-img">
+                Imagen o información referencial
+            </div>
+            <div class="header-texto">
+                <h1>Diseño Web Responsivo</h1>
+                <p>Viewport, Media Queries y Grid-View</p>
+            </div>
+        </header>
 
-    <div class="layout">
+        <nav>
+            <a href="#concepto">Concepto</a>
+            <a href="#viewport">Viewport</a>
+            <a href="#media">Media Queries</a>
+            <a href="#grid">Grid-View</a>
+        </nav>
 
-        <aside>
-            <h2>Temas</h2>
+        <div class="layout">
 
-            <ul>
-                <li>Media Queries</li>
-                <li>Grid-View</li>
-                <li>Bootstrap 5</li>
-                <li>Containers</li>
-                <li>Grid System</li>
-                <li>Flex</li>
-                <li>Carousel</li>
-                <li>Navbar</li>
-            </ul>
-        </aside>
-
-        <main>
-
-            <section id="inicio">
-                <h2>Diseño Web Responsivo</h2>
-
-                <p>
-                    El diseño web responsivo permite que una página
-                    se adapte a diferentes tamaños de pantalla.
-                </p>
-
-                <div class="cuadro">Diseño Responsivo</div>
-            </section>
-
-            <section id="media">
-                <h2>CSS3 Media Queries</h2>
-
-                <p>
-                    Las Media Queries permiten aplicar estilos
-                    dependiendo del tamaño y características de la pantalla.
-                </p>
-
-                <div class="cuadro">Media Queries</div>
-            </section>
-
-            <section id="grid">
-                <h2>Grid-View</h2>
-
-                <p>
-                    Grid-View permite organizar el contenido utilizando
-                    un sistema de columnas.
-                </p>
-
-                <div class="grid-ejemplo">
-                    <div>Columna 1</div>
-                    <div>Columna 2</div>
+            <aside>
+                <div class="contenido-aside">
+                    <h2>Temas</h2>
+                    <ul>
+                        <li><a href="#concepto">Concepto</a></li>
+                        <li><a href="#viewport">Viewport</a></li>
+                        <li><a href="#media">Media Queries</a></li>
+                        <li><a href="#grid">Grid-View</a></li>
+                    </ul>
                 </div>
-            </section>
+            </aside>
 
-            <section id="bootstrap">
-                <h2>Bootstrap 5</h2>
+            <main>
 
-                <p>
-                    Bootstrap es un framework que facilita la creación
-                    de páginas web responsivas.
-                </p>
+                <article id="concepto">
+                    <h2>Diseño web responsivo</h2>
+                    <p>
+                        Permite que una misma página se adapte a cualquier tamaño
+                        de pantalla, ya sea celular, tablet o computadora.
+                    </p>
+                </article>
 
-                <div class="cuadro">Bootstrap 5</div>
-            </section>
+                <article id="viewport">
+                    <h2>Viewport</h2>
+                    <p>Es el área visible de la página. Se configura así:</p>
+                    <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+                </article>
 
-        </main>
+                <article id="media">
+                    <h2>CSS3 Media Queries</h2>
+                    <p>Aplican estilos según el tamaño de la pantalla.</p>
+                    <pre>@media (max-width: 768px) {
+    .layout { flex-direction: column; }
+}</pre>
+                </article>
+
+                <article id="grid">
+                    <h2>Grid-View</h2>
+                    <p>Organiza el contenido en columnas.</p>
+                    <div class="grid-ejemplo">
+                        <div>Columna 1</div>
+                        <div>Columna 2</div>
+                    </div>
+                </article>
+
+            </main>
+
+        </div>
+
+        <section class="galeria">
+            <div>img 1</div>
+            <div>img 2</div>
+            <div>img 3</div>
+            <div>img 4</div>
+        </section>
 
     </div>
 
     <footer>
-        <p>Diseño de Aplicaciones Web - Tarea 3</p>
+        <div>
+            <h3>Tarea 3</h3>
+            <p>Diseño de Aplicaciones Web</p>
+        </div>
+        <div>
+            <h3>UTN</h3>
+            <p>Emanuel Madrigal Guzmán</p>
+        </div>
     </footer>
 
 </body>
