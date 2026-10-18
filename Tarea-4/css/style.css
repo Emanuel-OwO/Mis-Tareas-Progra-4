@@ -41,3 +41,634 @@
     transform: translateX(0);
 }
 
+/* ---------- Navegación ---------- */
+
+.foody-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 40px;
+}
+
+.foody-brand {
+    margin: 0;
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.foody-brand span {
+    color: var(--secondary);
+}
+
+.foody-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.foody-nav a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.foody-nav a:hover {
+    text-decoration: underline;
+}
+/* ---------- Fin Navegación ---------- */
+
+/* ---------- Menú en cascada (Información) ---------- */
+.foody-info{
+    position: relative;
+}
+
+.foody-info-link::after {
+    content: "";
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid currentColor;
+}
+
+.foody-info-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    flex-direction: column;
+    padding: 10px 0;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.foody-info:hover .foody-info-menu {
+    display: flex;
+}
+
+.foody-info-menu a {
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.foody-info-menu a:hover {
+    background-color: var(--light);
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* ---------- Carousel ---------- */
+
+.foody-carousel {
+    position: relative;
+    width: 100%;
+}
+.foody-carousel img {
+    display: block;
+    width: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+
+.foody-carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 450px;
+    text-align: left;
+}
+
+.foody-carousel-title {
+    margin: 0 0 25px;
+    color: var(--dark);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Botones uno al lado del otro */
+.foody-carousel-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.foody-btn {
+    padding: 10px 35px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.foody-btn-primary {
+    background-color: var(--primary);
+}
+
+.foody-btn-secondary {
+    background-color: var(--secondary);
+}
+
+.foody-btn:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* ---------- Mejores Frutas ---------- */
+.foody-best-fruits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 40px 80px;
+}
+
+.foody-best-fruits img {
+    display: block; 
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 15px auto;
+    border-radius: 50%;
+}
+
+.foody-best-fruits h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.foody-best-fruits p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.foody-best-fruits .btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.foody-best-fruits .btn:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* ---------- Nos Caracteríz ---------- */
+.foody-Caracteríz {
+    background-color: var(--light);
+    padding: 50px 40px 80px;
+}
+
+.foody-Caracteríz .section-header {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.foody-Caracteríz .section-header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.foody-Caracteríz .section-header p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Las tres tarjetas en una fila */
+.foody-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.foody-card {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 240px;
+    padding: 30px 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.foody-card img {
+    display: block;
+    width: 70px;
+    height: auto;
+    margin: 0 auto 20px;
+    mix-blend-mode: multiply;
+}
+
+.foody-card h4 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.foody-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 20px 20px;
+}
+
+.foody-btn-outline {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    color: var(--primary);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.foody-btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* ---------- Productos Start ---------- */
+
+.foody-products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 40px 80px;
+}
+
+.foody-products-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.foody-products-intro {
+    flex: 1 1 400px;
+}
+
+.foody-products-title {
+    margin: 0 0 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.foody-products-description {
+    max-width: 500px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Filtros (Frutas, Legumbres, Tubérculos) */
+.foody-products-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.foody-products-tab-link {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 2px solid var(--primary);
+    background-color: white;
+    color: var(--dark);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.foody-products-tab-link:hover,
+.foody-products-tab-link.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Cuadrícula: 3 columnas */
+.foody-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Tarjeta */
+.foody-product-card {
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.foody-product-image {
+    overflow: hidden;
+}
+
+.foody-product-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Nombre y precio */
+.foody-product-info {
+    padding: 18px 10px 14px;
+    text-align: center;
+}
+
+.foody-product-name {
+    display: block;
+    margin-bottom: 8px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.foody-product-price {
+    display: block;
+    font-size: 14px;
+    color: var(--primary);
+}
+
+/* Barra inferior: View detail | Add to cart */
+.foody-product-actions {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+}
+
+.foody-product-action {
+    flex: 1;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.foody-product-action + .foody-product-action {
+    border-left: 1px solid #e5e5e5;
+}
+
+.foody-product-action-link {
+    font-size: 12px;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.foody-product-action-link:hover {
+    color: var(--primary);
+}
+
+.foody-product-icon {
+    margin-right: 8px;
+    color: var(--primary);
+}
+/* ---------- FIN Productos ---------- */
+
+
+/* ---------- Visita nuestras fincas ---------- */
+.foody-farms-visit {
+    margin-top: 80px;
+    padding: 50px 40px;
+    background-color: var(--primary);
+}
+
+.foody-farms-visit-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.foody-farms-visit-text {
+    flex: 1 1 400px;
+    max-width: 800px;
+}
+
+.foody-farms-visit-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: white;
+}
+
+.foody-farms-visit-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: white;
+}
+
+.foody-farms-visit-button {
+    flex: 0 0 auto;
+}
+
+.foody-farms-visit-button .foody-btn {
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.foody-farms-visit-button .foody-btn-primary {
+    background-color: darkorange;
+}
+
+.foody-farms-visit-button .foody-btn:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* ---------- Nuestro Blog ---------- */
+.foody-blog {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+}
+
+.foody-blog .section-header {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.foody-blog-title {
+    margin: 0 0 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.foody-blog-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.foody-blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.foody-blog-card {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 240px;
+    background-color: var(--light);
+    overflow: hidden;
+}
+
+.foody-blog-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover
+}
+
+.foody-blog-content {
+    padding: 20px;
+}
+
+.foody-blog-link {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.foody-blog-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.foody-footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 60px 40px 40px;
+}
+
+/* Tres columnas en una fila */
+.foody-footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.foody-footer-brand,
+.foody-footer-contact,
+.foody-footer-links {
+    flex: 1 1 250px;
+}
+
+/* Logo con letras de colores (F y dy verdes, oo naranja) */
+.foody-footer-logo {
+    margin: 0 0 25px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.foody-footer-logo span {
+    color: var(--secondary);
+}
+
+.foody-footer-brand p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* Títulos de las columnas */
+.foody-footer-title {
+    margin: 0 0 25px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Dirección */
+.foody-footer-contact p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.foody-footer-contact p:hover {
+    color: white;
+}
+
+/* Accesos rápidos */
+.foody-footer-links a {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.foody-footer-links a:hover {
+    color: white;
+}
+
+/* Iconos */
+.foody-footer-icon {
+    display: inline-block;
+    width: 16px;
+    margin-right: 10px;
+}
+
+.foody-footer-links .foody-footer-icon {
+    width: auto;
+    margin-right: 8px;
+    font-size: 10px;
+}
+
+/* Pantallas medianas y pequeñas */
+@media (max-width: 992px) {
+    .foody-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .foody-products-grid {
+        grid-template-columns: 1fr;
+    }
+}
