@@ -1,0 +1,36 @@
+
+/* ===== Estilos de impresión del crédito ===== */
+
+@media print {
+
+    nav,
+    footer,
+    .section-footer,
+    #formCredito,
+    .intro-single,
+    #preloader,
+    .back-to-top {
+        display: none !important;
+    }
+
+    #seccionProyeccion {
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    .contact,
+    .contact-map,
+    #formularioCredito {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    tr {
+        break-inside: avoid;
+    }
+
+}
